@@ -1,6 +1,6 @@
 {
   "homepage": "http://naguiluz.github.io/RPG_Forum_client",
-  "name": "RPG_F_C",
+  "name": "RPG_Forum_client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

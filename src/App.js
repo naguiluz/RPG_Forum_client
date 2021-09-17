@@ -10,6 +10,7 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import CreateWorld from './components/world/CreateWorld'
 
 class App extends Component {
   constructor (props) {
@@ -56,6 +57,7 @@ class App extends Component {
           />
         ))}
 	      <main className='container'>
+          {/* User Routes */}
 	        <Route
             path='/sign-up/'
             render={() => (
@@ -85,6 +87,12 @@ class App extends Component {
             render={() => (
               <ChangePassword msgAlert={this.msgAlert} user={user} />
             )}
+          />
+          {/* World Routes */}
+          <AuthenticatedRoute
+            user={user}
+            path='/create-world/'
+            render={() => <CreateWorld msgAlert={this.msgAlert} user={user} />}
           />
         </main>
       </Fragment>

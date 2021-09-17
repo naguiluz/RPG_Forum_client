@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { createWorld } from '../../api/world'
 import { createWorldSuccess, createWorldFailure } from '../AutoDismissAlert/messages'
-import './post.scss'
+// import './post.scss'
 
 // create class, constructor, and state for Create World
 class CreateWorld extends Component {
@@ -14,8 +14,7 @@ class CreateWorld extends Component {
     this.state = {
       game: '',
       name: '',
-      active: '',
-      setting_type: '',
+      settingType: '',
       description: ''
     }
   }
@@ -47,8 +46,7 @@ class CreateWorld extends Component {
         this.setState({
           game: '',
           name: '',
-          active: '',
-          setting_type: '',
+          settingType: '',
           description: ''
         })
         msgAlert({
@@ -57,20 +55,18 @@ class CreateWorld extends Component {
           variant: 'danger'
         })
       })
-      // redirect after world create failure
-      .then(() => history.push('/worlds/'))
   }
 
   render () {
     // destructuring state for later use
-    const { game, name, active, setting_type, description } = this.state
+    const { game, name, settingType, description } = this.state
     // create create post form
     return (
       <>
         <div className='row' id='showPost'>
           <div className='col-sm-10 col-md-8 mx-auto mt-5'>
             <center>
-              <h3 className='register'>game</h3>
+              <h3 className='register'>The Energies and Elements of the Universe are beginning to collide...</h3>
             </center>
             <Form onSubmit={this.onCreateWorld}>
               <Form.Group controlId='game'>
@@ -90,28 +86,17 @@ class CreateWorld extends Component {
                   required
                   name='name'
                   value={name}
-                  placeholder='name'
+                  placeholder='World Name'
                   onChange={this.handleChange}
                 />
               </Form.Group>
               <br />
-              <Form.Group controlId='active'>
-                <Form.Label>World currently being traversed:</Form.Label>
-                <Form.Control
-                  required
-                  input='radio'
-                  name='active'
-                  value={active}
-                  onChange={this.handleChange}
-                />
-              </Form.Group>
-              <br />
-              <Form.Group controlId='setting_type'>
+              <Form.Group controlId='settingType'>
                 <Form.Label>Setting of your World:</Form.Label>
                 <Form.Control
-                  name='setting_type'
-                  value={setting_type}
-                  placeholder='setting_type'
+                  name='settingType'
+                  value={settingType}
+                  placeholder='World Setting'
                   onChange={this.handleChange}
                 />
               </Form.Group>
@@ -122,12 +107,13 @@ class CreateWorld extends Component {
                   required
                   name='description'
                   value={description}
-                  placeholder='description'
+                  placeholder='Description'
                   as='textarea'
                   rows={4}
                   onChange={this.handleChange}
                 />
               </Form.Group>
+              <br />
               <div className='d-grid gap-2 col-6 mx-auto'>
                 <Button variant='btn btn-secondary' type='submit'>
                     Submit

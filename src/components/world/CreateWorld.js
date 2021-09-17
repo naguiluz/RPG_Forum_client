@@ -14,7 +14,7 @@ class CreateWorld extends Component {
     this.state = {
       game: '',
       name: '',
-      settingType: '',
+      setting: '',
       description: ''
     }
   }
@@ -46,7 +46,7 @@ class CreateWorld extends Component {
         this.setState({
           game: '',
           name: '',
-          settingType: '',
+          setting: '',
           description: ''
         })
         msgAlert({
@@ -59,7 +59,7 @@ class CreateWorld extends Component {
 
   render () {
     // destructuring state for later use
-    const { game, name, settingType, description } = this.state
+    const { game, name, setting, description } = this.state
     // create create post form
     return (
       <>
@@ -91,11 +91,11 @@ class CreateWorld extends Component {
                 />
               </Form.Group>
               <br />
-              <Form.Group controlId='settingType'>
+              <Form.Group controlId='setting'>
                 <Form.Label>Setting of your World:</Form.Label>
                 <Form.Control
-                  name='settingType'
-                  value={settingType}
+                  name='setting'
+                  value={setting}
                   placeholder='World Setting'
                   onChange={this.handleChange}
                 />
@@ -116,7 +116,7 @@ class CreateWorld extends Component {
               <br />
               <div className='d-grid gap-2 col-6 mx-auto'>
                 <Button variant='btn btn-secondary' type='submit'>
-                    Submit
+                    IGNITE
                 </Button>
               </div>
             </Form>

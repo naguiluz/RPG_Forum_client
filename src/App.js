@@ -57,20 +57,20 @@ class App extends Component {
         ))}
 	      <main className='container'>
 	        <Route
-            path='/sign-up'
+            path='/sign-up/'
             render={() => (
               <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
             )}
           />
           <Route
-            path='/sign-in'
+            path='/sign-in/'
             render={() => (
               <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
             )}
           />
           <AuthenticatedRoute
             user={user}
-            path='/sign-out'
+            path='/sign-out/'
             render={() => (
               <SignOut
                 msgAlert={this.msgAlert}
@@ -81,7 +81,7 @@ class App extends Component {
           />
           <AuthenticatedRoute
             user={user}
-            path='/change-password'
+            path='/change-pw/'
             render={() => (
               <ChangePassword msgAlert={this.msgAlert} user={user} />
             )}

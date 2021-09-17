@@ -5,5 +5,7 @@ export const signInFailure = 'Failed to sign in. Check your email and password a
 export const signOutSuccess = 'Come back soon!'
 export const changePasswordSuccess = 'Password changed successfully!'
 export const changePasswordFailure = 'Failed to change passwords. Check your old password and try again.'
+export const showIndexSuccess = 'You have conjured a list of all known Worlds.'
+export const showIndexFailure = 'An error in your scrying spells clouds your view of the known Worlds.'
 export const createWorldSuccess = 'The spark of your World has been ignited!'
 export const createWorldFailure = 'Your spells failed to ignite the spark of your World! Don\'t give up...give it another try!'

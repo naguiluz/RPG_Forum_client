@@ -19,3 +19,17 @@ export const createWorld = (data, user) => {
     }
   })
 }
+
+// Index request
+// no data, we will need a token
+export const indexAllWorlds = (user) => {
+  return axios({
+    // method key sets the HTTP verb/method for this request
+    // GET is the default method, so we can include or not up to us
+    method: 'GET',
+    url: apiUrl + '/worlds/',
+    headers: {
+      Authorization: `Token ${user.token}`
+    }
+  })
+}

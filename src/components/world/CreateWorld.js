@@ -63,7 +63,7 @@ class CreateWorld extends Component {
     // create create post form
     return (
       <>
-        <div className='row' id='showPost'>
+        <div className='row' id='showWorld'>
           <div className='col-sm-10 col-md-8 mx-auto mt-5'>
             <center>
               <h3 className='register'>The Energies and Elements of the Universe are beginning to collide...</h3>

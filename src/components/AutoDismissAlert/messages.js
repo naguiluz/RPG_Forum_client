@@ -7,5 +7,8 @@ export const changePasswordSuccess = 'Password changed successfully!'
 export const changePasswordFailure = 'Failed to change passwords. Check your old password and try again.'
 export const showIndexSuccess = 'You have conjured a list of all known Worlds.'
 export const showIndexFailure = 'An error in your scrying spells clouds your view of the known Worlds.'
+export const showWorldSuccess = 'You have conjured the visage of your desired World.'
+export const showWorldFailure =
+'You were unable to conjure the visage of your desired world.'
 export const createWorldSuccess = 'The spark of your World has been ignited!'
 export const createWorldFailure = 'Your spells failed to ignite the spark of your World! Don\'t give up...give it another try!'

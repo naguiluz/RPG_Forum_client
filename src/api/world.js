@@ -33,3 +33,14 @@ export const indexAllWorlds = (user) => {
     }
   })
 }
+
+// GET /worlds/:id, requires token
+export const showWorld = (id, user) => {
+  return axios({
+    url: apiUrl + '/worlds/' + id,
+    // method is optional, default is GET
+    headers: {
+      Authorization: `Token ${user.token}`
+    }
+  })
+}

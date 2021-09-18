@@ -56,10 +56,10 @@ class IndexAllWorlds extends React.Component {
     // create list of worlds
     console.log(this.state.world)
     const worldJsx = this.state.world.map((world) => (
-      <li key={world._id}>
+      <li key={world.id}>
         <Card className='box-world' style={{ width: '80%' }}>
           <Card.Body className='bg-box'>
-            <Link className='link-title' to={`/world/${world._id}`}>
+            <Link className='link-title' to={`/worlds/${world.id}`}>
               <Card.Title className='title-world'>{world.name}</Card.Title>
             </Link>
 
@@ -71,9 +71,9 @@ class IndexAllWorlds extends React.Component {
             </Card.Subtitle>
             <Card.Text>{world.description}</Card.Text>
 
-            {this.props.user._id === world.owner
+            {this.props.user.id === world.owner
               ? <Link
-                to={`/world/${world._id}/edit`}
+                to={`/worlds/${world.id}/edit`}
                 className='btn btn-outline-secondary'>
                       Transmute Your World
               </Link>

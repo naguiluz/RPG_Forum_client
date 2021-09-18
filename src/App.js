@@ -12,6 +12,7 @@ import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import CreateWorld from './components/world/CreateWorld'
 import IndexAllWorlds from './components/world/IndexWorld'
+import ShowWorld from './components/world/ShowWorld'
 
 class App extends Component {
   constructor (props) {
@@ -92,10 +93,16 @@ class App extends Component {
           {/* World Routes */}
           <AuthenticatedRoute
             user={user}
-            path='/worlds'
+            path='/worlds/'
             render={() => (
               <IndexAllWorlds msgAlert={this.msgAlert} user={user} />
             )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            exact
+            path='/worlds/:id'
+            render={() => <ShowWorld msgAlert={this.msgAlert} user={user} />}
           />
           <AuthenticatedRoute
             user={user}

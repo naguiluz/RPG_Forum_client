@@ -37,7 +37,7 @@ export const indexAllWorlds = (user) => {
 // GET /worlds/:id, requires token
 export const showWorld = (id, user) => {
   return axios({
-    url: apiUrl + '/worlds/' + id,
+    url: apiUrl + '/worlds/' + id + '/',
     // method is optional, default is GET
     headers: {
       Authorization: `Token ${user.token}`
@@ -48,8 +48,27 @@ export const showWorld = (id, user) => {
 // DELETE /worlds/:id, requires token
 export const deleteWorld = (id, user) => {
   return axios({
-    url: apiUrl + '/worlds/' + id,
+    url: apiUrl + '/worlds/' + id + '/',
     method: 'DELETE',
+    headers: {
+      Authorization: `Token ${user.token}`
+    }
+  })
+}
+
+// PATCH /worlds/:id, requires token
+export const updateWorld = (data, id, user) => {
+  return axios({
+    url: apiUrl + '/worlds/' + id + '/',
+    method: 'patch',
+    data: {
+      world: {
+        game: data.game,
+        name: data.name,
+        setting: data.setting,
+        description: data.description
+      }
+    },
     headers: {
       Authorization: `Token ${user.token}`
     }

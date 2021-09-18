@@ -13,6 +13,7 @@ import ChangePassword from './components/auth/ChangePassword'
 import CreateWorld from './components/world/CreateWorld'
 import IndexAllWorlds from './components/world/IndexWorld'
 import ShowWorld from './components/world/ShowWorld'
+import UpdateWorld from './components/world/UpdateWorld'
 
 class App extends Component {
   constructor (props) {
@@ -108,6 +109,11 @@ class App extends Component {
             user={user}
             path='/create-world/'
             render={() => <CreateWorld msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path='/worlds/:id/edit'
+            render={() => <UpdateWorld msgAlert={this.msgAlert} user={user} />}
           />
         </main>
       </Fragment>

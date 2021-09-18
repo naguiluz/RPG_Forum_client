@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 // add Link
 import { withRouter } from 'react-router-dom'
 // API request
-import { showWorld } from '../../api/world'
+import { showWorld, deleteWorld } from '../../api/world'
 // import { deleteComment } from '../../api/comment'
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 import World from './WorldComponent'
 import {
-  showWorldFailure, showWorldSuccess
+  showWorldFailure, showWorldSuccess, deleteWorldFailure, deleteWorldSuccess
 } from '../AutoDismissAlert/messages'
 // import './world.scss'
 // creates single show world with constructor, state
@@ -55,26 +55,26 @@ class ShowWorld extends Component {
       )
   }
 
-  // handleDeletePost = (event) => {
-  //   const { match, user, msgAlert, history } = this.props
-  //   deletePost(match.params.id, user)
-  //   // Redirect to the list of posts
-  //     .then(() => history.push('/posts-all'))
-  //     .then(() =>
-  //       msgAlert({
-  //         heading: 'Delete post successfully',
-  //         message: deletePostSuccess,
-  //         variant: 'success'
-  //       })
-  //     )
-  //     .catch(() =>
-  //       msgAlert({
-  //         heading: 'Delete post failed :(',
-  //         message: deletePostFailure,
-  //         variant: 'danger'
-  //       })
-  //     )
-  // }
+  handleDeleteWorld = (event) => {
+    const { match, user, msgAlert, history } = this.props
+    deleteWorld(match.params.id, user)
+    // Redirect to the list of posts
+      .then(() => history.push('/worlds'))
+      .then(() =>
+        msgAlert({
+          heading: 'Deleted World successfully',
+          message: deleteWorldSuccess,
+          variant: 'success'
+        })
+      )
+      .catch(() =>
+        msgAlert({
+          heading: 'Delete World failed',
+          message: deleteWorldFailure,
+          variant: 'danger'
+        })
+      )
+  }
 
   // // handles delete comment
   // handleDeleteComment = (id) => {
@@ -101,7 +101,7 @@ class ShowWorld extends Component {
   // }
 
   render () {
-    // deconstructing state of world for later use
+    // destructuring state of world for later use
     const { name, game, setting, description, id, owner } = this.state.world
     // if no image show 'default image'
     // if (image === '') {
@@ -127,13 +127,13 @@ class ShowWorld extends Component {
         />
         <br />
         {/* button to delete world */}
-        {/* { this.props.user.id === this.state.world.owner
-            ? <Button
-              onClick={this.handleDeleteWorld}
-              variant='danger'>
+        { this.props.user.id === this.state.world.owner
+          ? <Button
+            onClick={this.handleDeleteWorld}
+            variant='danger'>
                           Delete World
-            </Button>
-            : '' } */}
+          </Button>
+          : '' }
         {/* create comment */}
         {/* <div className='divider' /> */}
         {/* <Link to={`/comments/${id}`} class='btn btn-secondary'>

@@ -12,3 +12,5 @@ export const showWorldFailure =
 'You were unable to conjure the visage of your desired world.'
 export const createWorldSuccess = 'The spark of your World has been ignited!'
 export const createWorldFailure = 'Your spells failed to ignite the spark of your World! Don\'t give up...give it another try!'
+export const deleteWorldSuccess = 'This World has been removed from this plane of existence...a cruel fate'
+export const deleteWorldFailure = 'The Heros of this World have found a way to foil your plans...dare to try again?'

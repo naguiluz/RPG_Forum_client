@@ -44,3 +44,14 @@ export const showWorld = (id, user) => {
     }
   })
 }
+
+// DELETE /worlds/:id, requires token
+export const deleteWorld = (id, user) => {
+  return axios({
+    url: apiUrl + '/worlds/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: `Token ${user.token}`
+    }
+  })
+}

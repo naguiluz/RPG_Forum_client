@@ -12,15 +12,23 @@ const authenticatedOptions = (
         type='button'
         className='btn btn-secondary btn-lg'
         id='create-btn'>
-                        Ignite a World
+        Ignite a World
       </button>
     </NavLink>
     <NavLink to='/worlds/'>
       <button
         type='button'
         className='btn btn-secondary btn-lg'
-        id='create-btn'>
-                        Scry Known Worlds
+        id='index-btn'>
+        Scry Known Worlds
+      </button>
+    </NavLink>
+    <NavLink to='/create-character/'>
+      <button
+        type='button'
+        className='btn btn-secondary btn-lg'
+        id='create-char-btn'>
+        Sculpt a Character
       </button>
     </NavLink>
   </Fragment>

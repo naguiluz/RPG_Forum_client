@@ -25,3 +25,17 @@ export const createCharacter = (data, user) => {
     }
   })
 }
+
+// Index request
+// no data, we will need a token
+export const indexAllCharacters = (user) => {
+  return axios({
+    // method key sets the HTTP verb/method for this request
+    // GET is the default method, so we can include or not up to us
+    method: 'GET',
+    url: apiUrl + '/characters/',
+    headers: {
+      Authorization: `Token ${user.token}`
+    }
+  })
+}

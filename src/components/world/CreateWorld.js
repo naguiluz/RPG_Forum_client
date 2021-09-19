@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { createWorld } from '../../api/world'
@@ -119,6 +119,7 @@ class CreateWorld extends Component {
                     IGNITE
                 </Button>
               </div>
+              <Link to={'/worlds/'} className="btn btn-primary">Cancel</Link>
             </Form>
           </div>
         </div>

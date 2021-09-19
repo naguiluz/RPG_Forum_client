@@ -7,6 +7,30 @@ const authenticatedOptions = (
   <Fragment>
     <NavLink to='/change-pw/' className='nav-link'>Change Password</NavLink>
     <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
+    <NavLink to='/create-world/'>
+      <button
+        type='button'
+        className='btn btn-secondary btn-lg'
+        id='create-btn'>
+        Ignite a World
+      </button>
+    </NavLink>
+    <NavLink to='/worlds/'>
+      <button
+        type='button'
+        className='btn btn-secondary btn-lg'
+        id='index-btn'>
+        Scry Known Worlds
+      </button>
+    </NavLink>
+    <NavLink to='/create-character/'>
+      <button
+        type='button'
+        className='btn btn-secondary btn-lg'
+        id='create-char-btn'>
+        Sculpt a Character
+      </button>
+    </NavLink>
   </Fragment>
 )
 
@@ -19,7 +43,6 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <Fragment>
-    <NavLink exact to='/' className='nav-link'>Home</NavLink>
   </Fragment>
 )
 

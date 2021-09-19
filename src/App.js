@@ -10,6 +10,13 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+// worlds
+import CreateWorld from './components/world/CreateWorld'
+import IndexAllWorlds from './components/world/IndexWorld'
+import ShowWorld from './components/world/ShowWorld'
+import UpdateWorld from './components/world/UpdateWorld'
+// characters
+import CreateCharacter from './components/character/CreateCharacter'
 
 class App extends Component {
   constructor (props) {
@@ -56,6 +63,7 @@ class App extends Component {
           />
         ))}
 	      <main className='container'>
+          {/* User Routes */}
 	        <Route
             path='/sign-up/'
             render={() => (
@@ -85,6 +93,36 @@ class App extends Component {
             render={() => (
               <ChangePassword msgAlert={this.msgAlert} user={user} />
             )}
+          />
+          {/* World Routes */}
+          <AuthenticatedRoute
+            user={user}
+            path='/worlds/'
+            render={() => (
+              <IndexAllWorlds msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            exact
+            path='/worlds/:id'
+            render={() => <ShowWorld msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path='/create-world/'
+            render={() => <CreateWorld msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path='/worlds/:id/edit'
+            render={() => <UpdateWorld msgAlert={this.msgAlert} user={user} />}
+          />
+          {/* Character Routes */}
+          <AuthenticatedRoute
+            user={user}
+            path='/create-character/'
+            render={() => <CreateCharacter msgAlert={this.msgAlert} user={user} />}
           />
         </main>
       </Fragment>

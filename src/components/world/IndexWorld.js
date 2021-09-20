@@ -62,22 +62,16 @@ class IndexAllWorlds extends React.Component {
             <Link className='link-title' to={`/worlds/${world.id}`}>
               <Card.Title className='title-world'>{world.name}</Card.Title>
             </Link>
-
             <Card.Subtitle className='mb-2 text-muted'>
-              {world.game}
+            Creator: {world.owner}
             </Card.Subtitle>
             <Card.Subtitle className='mb-2 text-muted'>
-              {world.setting}
+            Game: {world.game}
             </Card.Subtitle>
-            <Card.Text>{world.description}</Card.Text>
-
-            {this.props.user.id === world.owner
-              ? <Link
-                to={`/worlds/${world.id}/edit`}
-                className='btn btn-outline-secondary'>
-                      Transmute Your World
-              </Link>
-              : <p></p>}
+            <Card.Subtitle className='mb-2 text-muted'>
+            Setting: {world.setting}
+            </Card.Subtitle>
+            <Card.Text>Description: {world.description}</Card.Text>
           </Card.Body>
         </Card>
         <br />

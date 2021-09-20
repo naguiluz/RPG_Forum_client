@@ -31,6 +31,14 @@ const authenticatedOptions = (
         Sculpt a Character
       </button>
     </NavLink>
+    <NavLink to='/characters/'>
+      <button
+        type='button'
+        className='btn btn-secondary btn-lg'
+        id='index-btn'>
+        Summon Loyal Adventurers
+      </button>
+    </NavLink>
   </Fragment>
 )
 

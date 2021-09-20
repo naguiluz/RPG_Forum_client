@@ -13,21 +13,28 @@ import Card from 'react-bootstrap/Card'
 //   }
 // }
 
-const World = (props) => (
+const Character = (props) => (
   <Fragment>
-    <Card id='showWorld-bg' style={{ width: '100%' }}>
+    <Card id='showCharacter-bg' style={{ width: '100%' }}>
       <Card.Body>
         <center>
           <h2 className='register'> {props.name}</h2>{' '}
         </center>
-        <h4>Rule Set: {props.game}</h4>
-        <h6>Setting: {props.setting}</h6>
         <h6>Creator</h6>
         <Card.Subtitle className='mb-2 text-muted'>
           {props.owner}
         </Card.Subtitle>
+        <h4>Rule Set: {props.game}</h4>
+        <h6>Level: {props.level}</h6>
+        <h6>Race: {props.race}</h6>
+        <h6>Class: {props.discipline}</h6>
+        <h6>Background: {props.background}</h6>
+        <h6>Abilities: {props.abilities}</h6>
+        <h6>Items: {props.items}</h6>
         <h6>Description: </h6>
         <Card.Text>{props.description}</Card.Text>
+        <h6>Backstory: </h6>
+        <Card.Text>{props.backstory}</Card.Text>
         {/* <h6>Image</h6>
         <img src={props.image} style={styles.cardImage} alt='No image' /> */}
         {/* <Card.Text>
@@ -50,4 +57,4 @@ const World = (props) => (
   </Fragment>
 )
 
-export default World
+export default Character

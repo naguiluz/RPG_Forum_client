@@ -2,28 +2,31 @@ import React, { Component } from 'react'
 // add Link
 import { withRouter, Link } from 'react-router-dom'
 // API request
-import { showWorld, deleteWorld } from '../../api/world'
+import { showCharacter, deleteCharacter } from '../../api/character'
 // import { deleteComment } from '../../api/comment'
 import Button from 'react-bootstrap/Button'
-import World from './WorldComponent'
+import Character from './CharacterComponent'
 import {
-  showWorldFailure, showWorldSuccess, deleteWorldFailure, deleteWorldSuccess
+  showCharacterFailure, showCharacterSuccess, deleteCharacterFailure, deleteCharacterSuccess
 } from '../AutoDismissAlert/messages'
-// import './world.scss'
-// creates single show world with constructor, state
-class ShowWorld extends Component {
+// import './character.scss'
+// creates single show character with constructor, state
+class ShowCharacter extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      world: {
+      character: {
         game: '',
         name: '',
-        setting: '',
+        level: '',
+        race: '',
+        discipline: '',
+        background: '',
         description: '',
-        // image: '',
-        // comments: [],
-        owner: ''
+        abilities: '',
+        items: '',
+        backstory: ''
       }
     }
   }
@@ -32,45 +35,45 @@ class ShowWorld extends Component {
   componentDidMount () {
     // destructuring props for later use
     const { match, user, msgAlert } = this.props
-    // show world API call
-    showWorld(match.params.id, user)
+    // show character API call
+    showCharacter(match.params.id, user)
 
-      // sets state of world
+      // sets state of character
       .then((res) => {
-        return this.setState({ world: res.data.world })
+        return this.setState({ character: res.data.character })
       })
       .then(() =>
         msgAlert({
-          heading: 'Show world success',
-          message: showWorldSuccess,
+          heading: 'Show Character success',
+          message: showCharacterSuccess,
           variant: 'success'
         })
       )
       .catch(() =>
         msgAlert({
-          heading: 'Show world failed',
-          message: showWorldFailure,
+          heading: 'Show Character failed',
+          message: showCharacterFailure,
           variant: 'danger'
         })
       )
   }
 
-  handleDeleteWorld = (event) => {
+  handleDeleteCharacter = (event) => {
     const { match, user, msgAlert, history } = this.props
-    deleteWorld(match.params.id, user)
+    deleteCharacter(match.params.id, user)
     // Redirect to the list of posts
-      .then(() => history.push('/worlds'))
+      .then(() => history.push('/characters'))
       .then(() =>
         msgAlert({
-          heading: 'Deleted World successfully',
-          message: deleteWorldSuccess,
+          heading: 'Deleted Character successfully',
+          message: deleteCharacterSuccess,
           variant: 'success'
         })
       )
       .catch(() =>
         msgAlert({
-          heading: 'Delete World failed',
-          message: deleteWorldFailure,
+          heading: 'Delete Character failed',
+          message: deleteCharacterFailure,
           variant: 'danger'
         })
       )
@@ -101,44 +104,41 @@ class ShowWorld extends Component {
   // }
 
   render () {
-    // destructuring state of world for later use
-    const { name, game, setting, description, id, owner } = this.state.world
+    // destructuring state of character for later use
+    const { owner, game, name, level, race, discipline, background, description, abilities, items, backstory } = this.state.character
     // if no image show 'default image'
     // if (image === '') {
     return (
       <div>
-        {/* bringing in the component World that is accepting passed down data as props */}
+        {/* bringing in the component character that is accepting passed down data as props */}
         <br />
-        <World
-          // id='showWorld-bg'
+        <Character
+          owner={owner}
           name={name}
           game={game}
-          setting={setting}
+          level={level}
+          race={race}
+          discipline={discipline}
+          background={background}
+          abilities={abilities}
+          items={items}
           description={description}
-          // image={
-          //   'https://image.shutterstock.com/image-vector/default-word-digital-style-glowing-600w-1668796114.jpg'
-          // }
-          // comments={comments}
-          owner={owner}
-          worldId={id}
-          // our functions are passed to WorldComponent
-          // onClick={this.handleDeleteComment}
-          // onClickUpdate={this.handleUpdateComment}
+          backstory={backstory}
         />
         <br />
-        {/* button to delete world */}
-        { this.props.user.id === this.state.world.owner
+        {/* button to delete character */}
+        { this.props.user.id === this.state.character.owner
           ? <Button
-            onClick={this.handleDeleteWorld}
+            onClick={this.handleDeleteCharacter}
             variant='danger'>
-                          Delete World
+            Destroy Character
           </Button>
           : '' }
-        {this.props.user.id === this.state.world.owner
+        {this.props.user.id === this.state.character.owner
           ? <Link
-            to={`/worlds/${this.state.world.id}/edit`}
+            to={`/characters/${this.state.character.id}/edit`}
             className='btn btn-outline-secondary'>
-                      Transmute Your World
+            Reshape Your Character
           </Link>
           : <p></p>}
         {/* create comment */}
@@ -188,4 +188,4 @@ class ShowWorld extends Component {
   }
 }
 
-export default withRouter(ShowWorld)
+export default withRouter(ShowCharacter)

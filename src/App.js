@@ -17,6 +17,9 @@ import ShowWorld from './components/world/ShowWorld'
 import UpdateWorld from './components/world/UpdateWorld'
 // characters
 import CreateCharacter from './components/character/CreateCharacter'
+import IndexAllCharacters from './components/character/IndexCharacter'
+import ShowCharacter from './components/character/ShowCharacter'
+import UpdateCharacter from './components/character/UpdateCharacter'
 
 class App extends Component {
   constructor (props) {
@@ -97,7 +100,7 @@ class App extends Component {
           {/* World Routes */}
           <AuthenticatedRoute
             user={user}
-            path='/worlds/'
+            exact path='/worlds/'
             render={() => (
               <IndexAllWorlds msgAlert={this.msgAlert} user={user} />
             )}
@@ -123,6 +126,24 @@ class App extends Component {
             user={user}
             path='/create-character/'
             render={() => <CreateCharacter msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            user={user}
+            exact path='/characters/'
+            render={() => (
+              <IndexAllCharacters msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            exact
+            path='/characters/:id'
+            render={() => <ShowCharacter msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path='/characters/:id/edit'
+            render={() => <UpdateCharacter msgAlert={this.msgAlert} user={user} />}
           />
         </main>
       </Fragment>

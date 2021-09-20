@@ -68,7 +68,7 @@ export const updateCharacter = (data, id, user) => {
     url: apiUrl + '/characters/' + id + '/',
     method: 'patch',
     data: {
-      world: {
+      character: {
         game: data.game,
         name: data.name,
         level: data.level,

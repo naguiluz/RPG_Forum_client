@@ -19,6 +19,7 @@ import UpdateWorld from './components/world/UpdateWorld'
 import CreateCharacter from './components/character/CreateCharacter'
 import IndexAllCharacters from './components/character/IndexCharacter'
 import ShowCharacter from './components/character/ShowCharacter'
+import UpdateCharacter from './components/character/UpdateCharacter'
 
 class App extends Component {
   constructor (props) {
@@ -138,6 +139,11 @@ class App extends Component {
             exact
             path='/characters/:id'
             render={() => <ShowCharacter msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path='/characters/:id/edit'
+            render={() => <UpdateCharacter msgAlert={this.msgAlert} user={user} />}
           />
         </main>
       </Fragment>

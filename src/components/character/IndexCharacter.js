@@ -50,12 +50,12 @@ class IndexAllCharacters extends React.Component {
       return 'loading...'
     }
     // variable to save array.map()
-    if (this.character === null) {
-      <h3>No Characters</h3>
-    }
+    // if (this.state.character === null) {
+    //   return <h3>No Characters</h3>
+    // }
 
     // create list of characters
-    console.log(this.state.character)
+    // console.log(this.state.character)
     // const { name, game, level, race, discipline, background, abilities, items, description, backstory } = this.state.character
     const characterJsx = this.state.character.map((character) => (
       <li key={character.id}>

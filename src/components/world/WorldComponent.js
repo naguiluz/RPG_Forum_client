@@ -22,7 +22,7 @@ const World = (props) => (
         </center>
         <h4>Rule Set: {props.game}</h4>
         <h6>Setting: {props.setting}</h6>
-        <h6>User</h6>
+        <h6>Creator</h6>
         <Card.Subtitle className='mb-2 text-muted'>
           {props.owner}
         </Card.Subtitle>

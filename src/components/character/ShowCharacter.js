@@ -105,7 +105,8 @@ class ShowCharacter extends Component {
 
   render () {
     // destructuring state of character for later use
-    const { owner, game, name, level, race, discipline, background, description, abilities, items, backstory } = this.state.character
+    // removed owner below for v1
+    const { game, name, level, race, discipline, background, description, abilities, items, backstory } = this.state.character
     // if no image show 'default image'
     // if (image === '') {
     return (
@@ -113,7 +114,7 @@ class ShowCharacter extends Component {
         {/* bringing in the component character that is accepting passed down data as props */}
         <br />
         <Character
-          owner={owner}
+          // owner={owner}
           name={name}
           game={game}
           level={level}

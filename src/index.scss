@@ -1,1 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+
+.icon {
+  @media (prefers-color-scheme: dark) {
+    circle {
+      fill: black;
+      stroke: yellow;
+    }
+  }
+}

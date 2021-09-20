@@ -2,7 +2,8 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
-
+// import Container from 'react-bootstrap/Container'
+// import Col from 'react-bootstrap/Col'
 import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
 import Header from './components/Header/Header'
@@ -55,8 +56,8 @@ class App extends Component {
 
     return (
       <Fragment>
-	      <Header user={user} />
-	      {msgAlerts.map((msgAlert) => (
+        <Header user={user} />
+        {msgAlerts.map((msgAlert) => (
           <AutoDismissAlert
             key={msgAlert.id}
             heading={msgAlert.heading}
@@ -66,10 +67,16 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
+        <p>hello</p>
+        {/* <Container>
+          <Col xs={6} md={4}>
+            <Image src='/public/fantasy.svg' roundedCircle />
+          </Col>
+        </Container> */}
         <Footer user={user} />
-	      <main className='container'>
+        <main className='container'>
           {/* User Routes */}
-	        <Route
+          <Route
             path='/sign-up/'
             render={() => (
               <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
@@ -102,7 +109,8 @@ class App extends Component {
           {/* World Routes */}
           <AuthenticatedRoute
             user={user}
-            exact path='/worlds/'
+            exact
+            path='/worlds/'
             render={() => (
               <IndexAllWorlds msgAlert={this.msgAlert} user={user} />
             )}
@@ -127,11 +135,14 @@ class App extends Component {
           <AuthenticatedRoute
             user={user}
             path='/create-character/'
-            render={() => <CreateCharacter msgAlert={this.msgAlert} user={user} />}
+            render={() => (
+              <CreateCharacter msgAlert={this.msgAlert} user={user} />
+            )}
           />
           <AuthenticatedRoute
             user={user}
-            exact path='/characters/'
+            exact
+            path='/characters/'
             render={() => (
               <IndexAllCharacters msgAlert={this.msgAlert} user={user} />
             )}
@@ -140,12 +151,16 @@ class App extends Component {
             user={user}
             exact
             path='/characters/:id'
-            render={() => <ShowCharacter msgAlert={this.msgAlert} user={user} />}
+            render={() => (
+              <ShowCharacter msgAlert={this.msgAlert} user={user} />
+            )}
           />
           <AuthenticatedRoute
             user={user}
             path='/characters/:id/edit'
-            render={() => <UpdateCharacter msgAlert={this.msgAlert} user={user} />}
+            render={() => (
+              <UpdateCharacter msgAlert={this.msgAlert} user={user} />
+            )}
           />
         </main>
       </Fragment>

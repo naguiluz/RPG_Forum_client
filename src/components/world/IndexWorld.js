@@ -62,9 +62,9 @@ class IndexAllWorlds extends React.Component {
             <Link className='link-title' to={`/worlds/${world.id}`}>
               <Card.Title className='title-world'>{world.name}</Card.Title>
             </Link>
-            <Card.Subtitle className='mb-2 text-muted'>
+            {/* <Card.Subtitle className='mb-2 text-muted'>
             Creator: {world.owner}
-            </Card.Subtitle>
+            </Card.Subtitle> */}
             <Card.Subtitle className='mb-2 text-muted'>
             Game: {world.game}
             </Card.Subtitle>

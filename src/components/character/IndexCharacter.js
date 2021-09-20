@@ -76,9 +76,9 @@ class IndexAllCharacters extends React.Component {
             <Link className='link-title' to={`/characters/${character.id}`}>
               <Card.Title className='title-character'>{character.name}</Card.Title>
             </Link>
-            <Card.Subtitle className='mb-2 text-muted'>
+            {/* <Card.Subtitle className='mb-2 text-muted'>
             Creator: {character.owner}
-            </Card.Subtitle>
+            </Card.Subtitle> */}
             <Card.Subtitle className='mb-2 text-muted'>
             Game: {character.game}
             </Card.Subtitle>

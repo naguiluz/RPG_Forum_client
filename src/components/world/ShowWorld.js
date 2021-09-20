@@ -102,7 +102,8 @@ class ShowWorld extends Component {
 
   render () {
     // destructuring state of world for later use
-    const { name, game, setting, description, id, owner } = this.state.world
+    // removed owner below for v1
+    const { name, game, setting, description, id } = this.state.world
     // if no image show 'default image'
     // if (image === '') {
     return (
@@ -119,7 +120,7 @@ class ShowWorld extends Component {
           //   'https://image.shutterstock.com/image-vector/default-word-digital-style-glowing-600w-1668796114.jpg'
           // }
           // comments={comments}
-          owner={owner}
+          // owner={owner}
           worldId={id}
           // our functions are passed to WorldComponent
           // onClick={this.handleDeleteComment}

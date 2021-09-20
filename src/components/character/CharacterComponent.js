@@ -20,10 +20,10 @@ const Character = (props) => (
         <center>
           <h2 className='register'> {props.name}</h2>{' '}
         </center>
-        <h6>Creator</h6>
+        {/* <h6>Creator</h6>
         <Card.Subtitle className='mb-2 text-muted'>
           {props.owner}
-        </Card.Subtitle>
+        </Card.Subtitle> */}
         <h4>Rule Set: {props.game}</h4>
         <h6>Level: {props.level}</h6>
         <h6>Race: {props.race}</h6>

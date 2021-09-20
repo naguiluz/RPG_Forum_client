@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import { Link, NavLink } from 'react-router-dom'
+// removed Link import below
+import { NavLink } from 'react-router-dom'
+import '../Header/HeaderFooter.scss'
 
 const authenticatedOptions = (
   <Fragment>
@@ -55,9 +57,9 @@ const alwaysOptions = (
 )
 
 const Footer = ({ user }) => (
-  <Navbar bg='primary' variant='dark' expand='md' fixed='bottom'>
+  <Navbar bg='dark' variant='dark' expand='md' fixed='bottom'>
     <Navbar.Brand>
-      <Link to='/' style={{ color: '#FFF', textDecoration: 'none' }}>X</Link>
+      {/* <Link to='/' style={{ color: '#FFF', textDecoration: 'none' }}></Link> */}
     </Navbar.Brand>
     <Navbar.Toggle aria-controls='basic-navbar-nav' />
     <Navbar.Collapse id='basic-navbar-nav'>

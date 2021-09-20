@@ -17,8 +17,8 @@ export const deleteWorldFailure = 'The Heroes of this World have found a way to 
 export const updateWorldSuccess = 'This World has been molded and shaped by your whims'
 export const updateWorldFailure = 'The people of this World have a strong will...you will need to try again.'
 // character messages
-export const showCharacterIndexSuccess = 'You have conjured a list of all known Worlds.'
-export const showCharacterIndexFailure = 'An error in your scrying spells clouds your view of the known Worlds.'
+export const showCharacterIndexSuccess = 'You have summoned your loyal Adventurers to kneel before you.'
+export const showCharacterIndexFailure = 'Your Adventurers are caught up in their quests. They fail to heed your summons.'
 export const showCharacterSuccess = 'You have conjured the visage of your desired Character.'
 export const showCharacterFailure = 'You were unable to conjure the visage of your desired Character.'
 export const createCharacterSuccess = 'The Character has been molded in your desired image!'

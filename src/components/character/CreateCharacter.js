@@ -103,6 +103,7 @@ class CreateCharacter extends Component {
                 <Form.Control
                   name='level'
                   value={level}
+                  type='number'
                   placeholder='Character Level'
                   onChange={this.handleChange}
                 />

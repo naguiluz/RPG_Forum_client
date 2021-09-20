@@ -5,9 +5,9 @@ import { Link, NavLink } from 'react-router-dom'
 
 const authenticatedOptions = (
   <Fragment>
-    {/* <NavLink to='/change-pw/' className='nav-link'>Change Password</NavLink>
-    <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink> */}
-    <NavLink to='/create-world/'>
+    <NavLink to='/change-pw/' className='nav-link'>Change Password</NavLink>
+    <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
+    {/* <NavLink to='/create-world/'>
       <button
         type='button'
         className='btn btn-secondary btn-lg'
@@ -38,14 +38,14 @@ const authenticatedOptions = (
         id='index-btn'>
         Summon Loyal Adventurers
       </button>
-    </NavLink>
+    </NavLink> */}
   </Fragment>
 )
 
 const unauthenticatedOptions = (
   <Fragment>
-    <NavLink to='/sign-up' className='nav-link'>Sign Up</NavLink>
-    <NavLink to='/sign-in' className='nav-link'>Sign In</NavLink>
+    {/* <NavLink to='/sign-up' className='nav-link'>Sign Up</NavLink>
+    <NavLink to='/sign-in' className='nav-link'>Sign In</NavLink> */}
   </Fragment>
 )
 
@@ -54,17 +54,17 @@ const alwaysOptions = (
   </Fragment>
 )
 
-const Header = ({ user }) => (
-  <Navbar bg='primary' variant='dark' expand='md'>
+const Footer = ({ user }) => (
+  <Navbar bg='primary' variant='dark' expand='md' fixed='bottom'>
     <Navbar.Brand>
-      <Link to='/' style={{ color: '#FFF', textDecoration: 'none' }}>Tome of Knowledge</Link>
+      <Link to='/' style={{ color: '#FFF', textDecoration: 'none' }}>X</Link>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls='basic-navbar-nav' />
     <Navbar.Collapse id='basic-navbar-nav'>
       <Nav className='ml-auto'>
-        {/* {user && (
+        {user && (
           <span className='navbar-text mr-2'>Welcome, {user.email}</span>
-        )} */}
+        )}
         {alwaysOptions}
         {user ? authenticatedOptions : unauthenticatedOptions}
       </Nav>
@@ -72,4 +72,4 @@ const Header = ({ user }) => (
   </Navbar>
 )
 
-export default Header
+export default Footer

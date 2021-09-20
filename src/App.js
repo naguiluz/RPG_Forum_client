@@ -6,6 +6,7 @@ import { v4 as uuid } from 'uuid'
 import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
@@ -65,6 +66,7 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
+        <Footer user={user} />
 	      <main className='container'>
           {/* User Routes */}
 	        <Route

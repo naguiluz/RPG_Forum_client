@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/RPG_Forum_client/static/css/main.e8459532.chunk.css",
-    "main.js": "/RPG_Forum_client/static/js/main.bc10320a.chunk.js",
-    "main.js.map": "/RPG_Forum_client/static/js/main.bc10320a.chunk.js.map",
+    "main.js": "/RPG_Forum_client/static/js/main.d538a2b1.chunk.js",
+    "main.js.map": "/RPG_Forum_client/static/js/main.d538a2b1.chunk.js.map",
     "runtime-main.js": "/RPG_Forum_client/static/js/runtime-main.812a50ce.js",
     "runtime-main.js.map": "/RPG_Forum_client/static/js/runtime-main.812a50ce.js.map",
     "static/js/2.fd961f08.chunk.js": "/RPG_Forum_client/static/js/2.fd961f08.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.812a50ce.js",
     "static/js/2.fd961f08.chunk.js",
     "static/css/main.e8459532.chunk.css",
-    "static/js/main.bc10320a.chunk.js"
+    "static/js/main.d538a2b1.chunk.js"
   ]
 }

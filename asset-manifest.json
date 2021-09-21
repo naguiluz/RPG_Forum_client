@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/RPG_Forum_client/static/css/main.183a5086.chunk.css",
-    "main.js": "/RPG_Forum_client/static/js/main.fdd3eb97.chunk.js",
-    "main.js.map": "/RPG_Forum_client/static/js/main.fdd3eb97.chunk.js.map",
+    "main.css": "/RPG_Forum_client/static/css/main.e8459532.chunk.css",
+    "main.js": "/RPG_Forum_client/static/js/main.7ad78d35.chunk.js",
+    "main.js.map": "/RPG_Forum_client/static/js/main.7ad78d35.chunk.js.map",
     "runtime-main.js": "/RPG_Forum_client/static/js/runtime-main.812a50ce.js",
     "runtime-main.js.map": "/RPG_Forum_client/static/js/runtime-main.812a50ce.js.map",
-    "static/js/2.855215f1.chunk.js": "/RPG_Forum_client/static/js/2.855215f1.chunk.js",
-    "static/js/2.855215f1.chunk.js.map": "/RPG_Forum_client/static/js/2.855215f1.chunk.js.map",
+    "static/js/2.fd961f08.chunk.js": "/RPG_Forum_client/static/js/2.fd961f08.chunk.js",
+    "static/js/2.fd961f08.chunk.js.map": "/RPG_Forum_client/static/js/2.fd961f08.chunk.js.map",
     "index.html": "/RPG_Forum_client/index.html",
-    "static/css/main.183a5086.chunk.css.map": "/RPG_Forum_client/static/css/main.183a5086.chunk.css.map",
-    "static/js/2.855215f1.chunk.js.LICENSE.txt": "/RPG_Forum_client/static/js/2.855215f1.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/RPG_Forum_client/static/media/PaperTexture.241e7315.jpg",
+    "static/css/main.e8459532.chunk.css.map": "/RPG_Forum_client/static/css/main.e8459532.chunk.css.map",
+    "static/js/2.fd961f08.chunk.js.LICENSE.txt": "/RPG_Forum_client/static/js/2.fd961f08.chunk.js.LICENSE.txt",
+    "static/media/IndexCharacter.scss": "/RPG_Forum_client/static/media/PaperTexture.241e7315.jpg",
     "static/media/HeaderFooter.scss": "/RPG_Forum_client/static/media/StoneTexture.7b7c0147.jpg",
     "static/media/fantasy.8e7fa856.svg": "/RPG_Forum_client/static/media/fantasy.8e7fa856.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.812a50ce.js",
-    "static/js/2.855215f1.chunk.js",
-    "static/css/main.183a5086.chunk.css",
-    "static/js/main.fdd3eb97.chunk.js"
+    "static/js/2.fd961f08.chunk.js",
+    "static/css/main.e8459532.chunk.css",
+    "static/js/main.7ad78d35.chunk.js"
   ]
 }

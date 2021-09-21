@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link, NavLink } from 'react-router-dom'
 import './HeaderFooter.scss'
+import { ReactComponent as Fantasy } from '../Footer/fantasy.svg'
 
 const authenticatedOptions = (
   <Fragment>
@@ -56,9 +57,14 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-  <Navbar bg='dark' variant='dark' expand='md'>
+  <Navbar expand='md' class='navbar'>
     <Navbar.Brand>
-      <Link to='/' style={{ color: '#ffffff', textDecoration: 'none' }}>RPGenerator</Link>
+      <Fantasy
+        width='30'
+        height='30'
+        background-color='#ffffff'
+      />
+      <Link to='/' style={{ color: '#ffffff', textDecoration: 'none' }} >RPGenerator</Link>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls='basic-navbar-nav' />
     <Navbar.Collapse id='basic-navbar-nav'>

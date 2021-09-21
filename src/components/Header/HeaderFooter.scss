@@ -1,8 +1,15 @@
-.navbar1 {
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+.navbar {
     border: 0;
     border-radius: 0 !important;
     font-size: 20px;
-    background-image:linear-gradient(to right ,#5e5a5a17 0,#1f68626c 80%);
+    font-family: Cinzel;
+    background-image: url('../../images/StoneTexture.jpg');
+}
+.footer {
+  bottom: 0;
+  padding-top: 60px;
 }
 
 #text-bar {

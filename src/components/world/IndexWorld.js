@@ -72,7 +72,7 @@ class IndexAllWorlds extends React.Component {
             <Card.Subtitle className='mb-2 text-muted'>
             Setting: {world.setting}
             </Card.Subtitle>
-            <Card.Text>Description: {world.description}</Card.Text>
+            <Card.Text style={{ fontSize: '1rem' }}>Description: <br/> {world.description}</Card.Text>
           </Card.Body>
         </Card>
         <br />

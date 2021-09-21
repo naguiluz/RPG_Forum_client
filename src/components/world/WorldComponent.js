@@ -26,7 +26,7 @@ const World = (props) => (
         <Card.Subtitle className='mb-2 text-muted'>
           {props.owner}
         </Card.Subtitle> */}
-        <h6>Description: </h6>
+        <p>Description: </p>
         <Card.Text style={{ fontSize: '1rem' }}>{props.description}</Card.Text>
         {/* <h6>Image</h6>
         <img src={props.image} style={styles.cardImage} alt='No image' /> */}

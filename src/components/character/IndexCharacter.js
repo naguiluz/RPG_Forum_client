@@ -89,8 +89,8 @@ class IndexAllCharacters extends React.Component {
             <Card.Subtitle className='mb-2 text-muted'>
             Weapons and Items:  {character.items}
             </Card.Subtitle>
-            <Card.Text>Description: {character.description}</Card.Text>
-            <Card.Text>Backstory: {character.backstory}</Card.Text>
+            <Card.Text style={{ fontSize: '1rem' }}>Description: <br/> {character.description}</Card.Text>
+            <Card.Text style={{ fontSize: '1rem' }}>Backstory: <br/> {character.backstory}</Card.Text>
           </Card.Body>
         </Card>
         <br />

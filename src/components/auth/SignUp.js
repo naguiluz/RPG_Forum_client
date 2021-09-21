@@ -90,6 +90,7 @@ render () {
               onChange={this.handleChange}
             />
           </Form.Group>
+          <p style={{ fontSize: '1rem' }}>passwords must be at least 6 characters long, please do not use real emails or passwords for this app.</p>
           <Button variant='primary' type='submit'>Submit</Button>
         </Form>
       </div>

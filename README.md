@@ -4,7 +4,7 @@ This is a site where users can create, share, and discuss their RPG worldbuildin
 [Link to Django Repo](https://github.com/naguiluz/RPG_Forum_django)
 
 Link to deployed client application:
-Link to deployed server:
+[Link to deployed server:](https://rpg-forum-django.herokuapp.com/)
 
 Technologies Used:
 - React

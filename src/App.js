@@ -2,8 +2,7 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
-// import Container from 'react-bootstrap/Container'
-// import Col from 'react-bootstrap/Col'
+import './App.scss'
 import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
 import Header from './components/Header/Header'
@@ -67,15 +66,13 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
-        <p>hello</p>
-        {/* <Container>
-          <Col xs={6} md={4}>
-            <Image src='/public/fantasy.svg' roundedCircle />
-          </Col>
-        </Container> */}
+        <body>
+          <p>Welcome to RPGenerator! a place for Game Masters to create their Characters and Worlds to be added to and stored!</p>
+        </body>
         <Footer user={user} />
         <main className='container'>
           {/* User Routes */}
+          <Route/>
           <Route
             path='/sign-up/'
             render={() => (

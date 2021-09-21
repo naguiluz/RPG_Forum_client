@@ -3,6 +3,7 @@ import { withRouter, Link } from 'react-router-dom'
 import { indexAllCharacters } from '../../api/character'
 import { showCharacterIndexSuccess, showCharacterIndexFailure } from '../AutoDismissAlert/messages'
 import Card from 'react-bootstrap/Card'
+import './IndexCharacter.scss'
 // import Character from './CharacterComponent'
 // import './character.scss'
 // import './Indexcharacter.scss'
@@ -59,18 +60,6 @@ class IndexAllCharacters extends React.Component {
     // const { name, game, level, race, discipline, background, abilities, items, description, backstory } = this.state.character
     const characterJsx = this.state.character.map((character) => (
       <li key={character.id}>
-        {/* <Character
-          name={name}
-          game={game}
-          level={level}
-          race={race}
-          discipline={discipline}
-          background={background}
-          abilities={abilities}
-          items={items}
-          description={description}
-          backstory={backstory}
-        /> */}
         <Card className='box-character' style={{ width: '80%' }}>
           <Card.Body className='bg-box'>
             <Link className='link-title' to={`/characters/${character.id}`}>

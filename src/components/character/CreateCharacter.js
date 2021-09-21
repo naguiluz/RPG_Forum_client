@@ -5,7 +5,6 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { createCharacter } from '../../api/character'
 import { createCharacterSuccess, createCharacterFailure } from '../AutoDismissAlert/messages'
-// import './post.scss'
 
 // create class, constructor, and state for Create Character
 class CreateCharacter extends Component {

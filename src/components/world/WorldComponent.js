@@ -15,7 +15,7 @@ import Card from 'react-bootstrap/Card'
 
 const World = (props) => (
   <Fragment>
-    <Card id='showWorld-bg' style={{ width: '100%' }}>
+    <Card id='showWorld-bg' className='box-world' style={{ width: '100%' }}>
       <Card.Body>
         <center>
           <h2 className='register'> {props.name}</h2>{' '}

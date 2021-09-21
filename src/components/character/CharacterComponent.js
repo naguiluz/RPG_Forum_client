@@ -1,21 +1,10 @@
 import React, { Fragment } from 'react'
 import Card from 'react-bootstrap/Card'
 // import Comment from './CommentForm'
-// import '../post/post.scss'
-
-// create show post format
-// const styles = {
-//   cardImage: {
-//     objectFit: 'contain',
-//     width: '50vw',
-//     height: '30vh',
-//     border: 'none'
-//   }
-// }
 
 const Character = (props) => (
   <Fragment>
-    <Card id='showCharacter-bg' style={{ width: '100%' }}>
+    <Card id='showCharacter-bg' className='box-character' style={{ width: '100%' }}>
       <Card.Body>
         <center>
           <h2 className='register'> {props.name}</h2>{' '}

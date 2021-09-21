@@ -3,6 +3,7 @@ import { withRouter, Link } from 'react-router-dom'
 import { indexAllWorlds } from '../../api/world'
 import { showIndexSuccess, showIndexFailure } from '../AutoDismissAlert/messages'
 import Card from 'react-bootstrap/Card'
+import './IndexWorld.scss'
 // import './world.scss'
 // import './IndexWorld.scss'
 // create index of all worlds class and constructor with state

@@ -110,7 +110,7 @@ class ShowCharacter extends Component {
     // if no image show 'default image'
     // if (image === '') {
     return (
-      <div>
+      <div className='box-character'>
         {/* bringing in the component character that is accepting passed down data as props */}
         <br />
         <Character
@@ -128,20 +128,24 @@ class ShowCharacter extends Component {
         />
         <br />
         {/* button to delete character */}
-        { this.props.user.id === this.state.character.owner
-          ? <Button
-            onClick={this.handleDeleteCharacter}
-            variant='danger'>
-            Destroy Character
-          </Button>
-          : '' }
         {this.props.user.id === this.state.character.owner
-          ? <Link
-            to={`/characters/${this.state.character.id}/edit`}
-            className='btn btn-outline-secondary'>
-            Reshape Your Character
-          </Link>
-          : <p></p>}
+          ? (
+            <Button onClick={this.handleDeleteCharacter} variant='danger'>Destroy Character
+            </Button>
+          )
+          : (
+            ''
+          )}
+        {this.props.user.id === this.state.character.owner
+          ? (
+            <Link
+              to={`/characters/${this.state.character.id}/edit`}
+              className='btn btn-outline-secondary'>Reshape Your Character
+            </Link>
+          )
+          : (
+            <p></p>
+          )}
         {/* create comment */}
         {/* <div className='divider' /> */}
         {/* <Link to={`/comments/${id}`} class='btn btn-secondary'>

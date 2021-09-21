@@ -21,6 +21,7 @@ import CreateCharacter from './components/character/CreateCharacter'
 import IndexAllCharacters from './components/character/IndexCharacter'
 import ShowCharacter from './components/character/ShowCharacter'
 import UpdateCharacter from './components/character/UpdateCharacter'
+import { ReactComponent as Fantasy } from '../src/components/Footer/fantasy.svg'
 
 class App extends Component {
   constructor (props) {
@@ -56,6 +57,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header user={user} />
+
         {msgAlerts.map((msgAlert) => (
           <AutoDismissAlert
             key={msgAlert.id}
@@ -66,13 +68,23 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
-        <body>
-          <p>Welcome to RPGenerator! a place for Game Masters to create their Characters and Worlds to be added to and stored!</p>
-        </body>
+
         <Footer user={user} />
         <main className='container'>
           {/* User Routes */}
-          <Route/>
+          <Route
+            exact
+            path='/'
+            render={() => (
+              <body>
+                <p>
+									Welcome to RPGenerator! a place for Game Masters to create
+									their Characters and Worlds to be added to and stored!
+                </p>{' '}
+                <Fantasy height='400' width='400' />
+              </body>
+            )}
+          />
           <Route
             path='/sign-up/'
             render={() => (

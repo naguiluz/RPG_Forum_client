@@ -46,8 +46,16 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
   <Fragment>
-    <NavLink to='/sign-up' className='nav-link'>Sign Up</NavLink>
-    <NavLink to='/sign-in' className='nav-link'>Sign In</NavLink>
+    <NavLink
+      to='/sign-up'
+      style={{ color: '#ffffff', textDecoration: 'none' }}
+      className='nav-link'>Sign Up
+    </NavLink>
+    <NavLink
+      to='/sign-in'
+      style={{ color: '#ffffff', textDecoration: 'none' }}
+      className='nav-link'>Sign In
+    </NavLink>
   </Fragment>
 )
 
@@ -62,7 +70,6 @@ const Header = ({ user }) => (
       <Fantasy
         width='30'
         height='30'
-        background-color='#ffffff'
       />
       <Link to='/' style={{ color: '#ffffff', textDecoration: 'none' }} >RPGenerator</Link>
     </Navbar.Brand>

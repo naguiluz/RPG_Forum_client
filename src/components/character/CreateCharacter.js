@@ -75,7 +75,7 @@ class CreateCharacter extends Component {
             <center>
               <h3 className='register'>The block of clay before you is eager to be sculpted...</h3>
             </center>
-            <Form onSubmit={this.onCreateCharacter}>
+            <Form onSubmit={this.onCreateCharacter} class="characterForm">
               <Form.Group controlId='game'>
                 <Form.Label>What are the laws of nature your character is bound by?</Form.Label>
                 <Form.Control
@@ -186,10 +186,17 @@ class CreateCharacter extends Component {
               <br />
               <div className='d-grid gap-2 col-6 mx-auto'>
                 <Button variant='btn btn-secondary' type='submit'>
-                    GIVE THEM LIFE
+                    SCULPT
                 </Button>
               </div>
-              <Link to={'/worlds/'} className="btn btn-primary">Cancel</Link>
+              <br />
+              <div>
+                <Link to={'/characters/'}>
+                  <Button variant='btn btn-secondary' className='d-grid gap-2 col-6 mx-auto' class='cancel'>
+                      CANCEL
+                  </Button>
+                </Link>
+              </div>
             </Form>
           </div>
         </div>

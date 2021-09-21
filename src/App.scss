@@ -1,5 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+.container {
+  font-family: 'Cinzel', serif;
+  // color: #ffffff;
+}
 
 body {
-  background-image: url('./images/PaperTexture.jpg')
+  background-image: url('./images/PaperTexture.jpg');
+  color: black;
+  font-family: 'Cinzel', serif;
+  font-size: xx-large;
+  text-align: center;
+
 }

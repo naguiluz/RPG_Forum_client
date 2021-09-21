@@ -8,8 +8,16 @@ import { ReactComponent as Fantasy } from './fantasy.svg'
 
 const authenticatedOptions = (
   <Fragment>
-    <NavLink to='/change-pw/' className='nav-link'>Change Password</NavLink>
-    <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
+    <NavLink
+      to='/change-pw/'
+      style={{ color: '#ffffff', textDecoration: 'none' }}
+      className='nav-link'>Change Password
+    </NavLink>
+    <NavLink
+      to='/sign-out'
+      style={{ color: '#ffffff', textDecoration: 'none' }}
+      className='nav-link'>Sign Out
+    </NavLink>
   </Fragment>
 )
 
@@ -26,18 +34,16 @@ const alwaysOptions = (
 const Footer = ({ user }) => (
   <Navbar bg='dark' variant='dark' expand='md' fixed='bottom' class='footer'>
     <Navbar.Brand>
-      <Fantasy
-        width='30'
-        height='30'
-        background-color='#ffffff'
-        bottom='0'
-      />
+      <Fantasy width='30' height='30' />
     </Navbar.Brand>
     <Navbar.Toggle aria-controls='basic-navbar-nav' />
     <Navbar.Collapse id='basic-navbar-nav'>
       <Nav className='ml-auto'>
         {user && (
-          <span className='navbar-text mr-2'>Welcome, {user.email}</span>
+          <span
+            className='navbar-text mr-2'
+            style={{ color: '#ffffff', textDecoration: 'none' }}>Welcome, {user.email}
+          </span>
         )}
         {alwaysOptions}
         {user ? authenticatedOptions : unauthenticatedOptions}

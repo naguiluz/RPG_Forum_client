@@ -12,19 +12,12 @@
   padding-top: 60px;
 }
 
-#text-bar {
+.nav-bar {
   display: flex;
   overflow-wrap: normal;
   margin: auto;
   margin-inline-start: 70px;
   font-weight: 900;
-  -webkit-text-stroke: 1px 0 rgb(255, 255, 255);
+  -webkit-text-stroke: 1px 0 rgb(189, 23, 23);
   justify-items: center;
-}
-#text-bar:hover {
-    background: rgba(15, 214, 228, 0.349);
-    border-radius: 5px;
-}
-#add-margin {
-  margin-left: 250px;
 }

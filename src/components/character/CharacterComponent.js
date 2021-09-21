@@ -31,10 +31,10 @@ const Character = (props) => (
         <h6>Background: {props.background}</h6>
         <h6>Abilities: {props.abilities}</h6>
         <h6>Items: {props.items}</h6>
-        <h6>Description: </h6>
-        <Card.Text>{props.description}</Card.Text>
-        <h6>Backstory: </h6>
-        <Card.Text>{props.backstory}</Card.Text>
+        <p>Description: </p>
+        <Card.Text style={{ fontSize: '1rem' }}>{props.description}</Card.Text>
+        <p>Backstory: </p>
+        <Card.Text style={{ fontSize: '1rem' }}>{props.backstory}</Card.Text>
         {/* <h6>Image</h6>
         <img src={props.image} style={styles.cardImage} alt='No image' /> */}
         {/* <Card.Text>

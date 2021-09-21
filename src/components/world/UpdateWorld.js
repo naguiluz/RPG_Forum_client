@@ -119,11 +119,18 @@ class UpdateWorld extends Component {
                 </Form.Group>
                 <br />
                 <div className='d-grid gap-2 col-6 mx-auto'>
-                  <Button variant='primary' type='submit'>
-                    Transmute
+                  <Button variant='btn btn-secondary' type='submit'>
+                    TRANSMUTE
                   </Button>
                 </div>
-                <Link to={'/worlds/'} className="btn btn-primary">Cancel</Link>
+                <br />
+                <div>
+                  <Link to={'/worlds/'}>
+                    <Button variant='btn btn-secondary' className='d-grid gap-2 col-6 mx-auto' class='cancel'>
+                      CANCEL
+                    </Button>
+                  </Link>
+                </div>
               </Form>
             </div>
           </div>

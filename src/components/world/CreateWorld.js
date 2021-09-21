@@ -119,7 +119,14 @@ class CreateWorld extends Component {
                     IGNITE
                 </Button>
               </div>
-              <Link to={'/worlds/'} className="btn btn-primary">Cancel</Link>
+              <br />
+              <div>
+                <Link to={'/worlds/'}>
+                  <Button variant='btn btn-secondary' className='d-grid gap-2 col-6 mx-auto' class='cancel'>
+                      CANCEL
+                  </Button>
+                </Link>
+              </div>
             </Form>
           </div>
         </div>
